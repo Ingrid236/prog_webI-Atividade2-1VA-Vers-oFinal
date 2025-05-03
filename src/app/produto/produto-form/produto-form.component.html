@@ -1,0 +1,33 @@
+<div class="cadastro-container">
+  <mat-card class="cadastro-card">
+    <mat-card-title>Cadastro de Produto</mat-card-title>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Nome -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome do Produto</mat-label>
+        <input matInput placeholder="Digite o nome do produto" formControlName="name" />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">
+          O nome do produto é obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Ativo -->
+      <div class="toggle-container">
+        <mat-slide-toggle formControlName="active" color="primary">
+          Produto Ativo
+        </mat-slide-toggle>
+      </div>
+
+      <!-- Ações -->
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+          Salvar
+        </button>
+        <button mat-stroked-button color="warn" type="button" routerLink="/produtos">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,44 @@
+/* Logo no toolbar */
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Título do sistema */
+.titulo {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Espaçador flexível para empurrar os botões à direita */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Botões do menu */
+.botao-menu {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Conteúdo principal ajustado para a altura total da tela */
+.content {
+  padding: 16px;
+  min-height: calc(100vh - 128px); /* toolbar (64px) + footer (64px), ajuste conforme necessário */
+}
+
+/* Rodapé fixo */
+.footer {
+  text-align: center;
+  padding: 12px;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: #666;
+}
+
+.icone-botao {
+  font-size: 20px;
+}

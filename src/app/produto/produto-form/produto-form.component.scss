@@ -1,0 +1,26 @@
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+}
+
+.cadastro-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.toggle-container {
+  margin-bottom: 24px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,4 +1,4 @@
-Atividade fron-end para a disciplina de programação WEB
+# Atividade fron-end para a disciplina de programação WEB
 
 
 1-Construir o Frontend para aplicação da primeira atividade, para essa atividade será necessário:
@@ -9,3 +9,9 @@ A atividade deverá ser implementada em Angular
 
 Frontend: Angular
 UI Framework: Angular Material
+
+## Adicionando dependência que mapeia o back-end
+
+```shell
+npm install np-openapi-gen
+```

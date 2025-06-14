@@ -22,6 +22,7 @@ import {MatIcon} from '@angular/material/icon';
 import {MatSlideToggle} from '@angular/material/slide-toggle';
 import {MatError, MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     MatInput,
     MatError,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

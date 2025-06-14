@@ -12,6 +12,19 @@
         </mat-error>
       </mat-form-field>
 
+      <!-- Preço (Adicionado) -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Preço</mat-label>
+        <span matPrefix>R$&nbsp;</span>
+        <input matInput type="number" placeholder="0,00" formControlName="price" />
+        <mat-error *ngIf="form.get('price')?.hasError('required')">
+          O preço é obrigatório.
+        </mat-error>
+        <mat-error *ngIf="form.get('price')?.hasError('min')">
+          O preço deve ser maior que zero.
+        </mat-error>
+      </mat-form-field>
+
       <!-- Ativo -->
       <div class="toggle-container">
         <mat-slide-toggle formControlName="active" color="primary">

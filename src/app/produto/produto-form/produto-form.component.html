@@ -1,9 +1,8 @@
 <div class="cadastro-container">
   <mat-card class="cadastro-card">
-    <mat-card-title>Cadastro de Produto</mat-card-title>
+    <mat-card-title>{{ pageTitle }}</mat-card-title>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <!-- Nome -->
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Nome do Produto</mat-label>
         <input matInput placeholder="Digite o nome do produto" formControlName="name" />
@@ -12,7 +11,6 @@
         </mat-error>
       </mat-form-field>
 
-      <!-- Preço (Adicionado) -->
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Preço</mat-label>
         <span matPrefix>R$&nbsp;</span>
@@ -25,19 +23,17 @@
         </mat-error>
       </mat-form-field>
 
-      <!-- Ativo -->
       <div class="toggle-container">
         <mat-slide-toggle formControlName="active" color="primary">
           Produto Ativo
         </mat-slide-toggle>
       </div>
 
-      <!-- Ações -->
       <div class="form-actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-          Salvar
+          {{ isEditMode ? 'Atualizar' : 'Salvar' }}
         </button>
-        <button mat-stroked-button color="warn" type="button" routerLink="/produtos">
+        <button mat-stroked-button color="warn" type="button" routerLink="/">
           Cancelar
         </button>
       </div>
